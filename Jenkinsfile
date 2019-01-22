@@ -12,5 +12,11 @@ pipeline {
               }
             }
           }
+          stage ("Deploy to preprod"){
+            steps{
+              build job : 'deploy-to-staging'
+
+            }
+          }
         }
 }
